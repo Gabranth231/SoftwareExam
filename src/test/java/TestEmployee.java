@@ -12,6 +12,17 @@ public class TestEmployee {
     public void TestTitleFail(){
         assertThrows(IllegalArgumentException.class,() -> new Employee("Title","Martin"
                 ,"265986","5689741",
-                "Full-Time",22));
+                "Full-Time",22),"Wrong Title");
+    }
+    @Test
+    public void TestName(){
+        Employee e1 = new Employee("Mr","Martin","265986","5689741",
+                "Full-Time",22);
+        assertTrue(e1.getName() != null);
+    }
+    @Test
+    public void TestNameFail(){
+        assertThrows(IllegalArgumentException.class,() -> new Employee("Mr","Tim","265986","5689741",
+                "Full-Time",22),"Name is Invalid");
     }
 }
