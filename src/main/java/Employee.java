@@ -26,7 +26,12 @@ public class Employee extends Throwable {
         else{
             throw new IllegalArgumentException("PPSID is Invalid");
         }
-        Phone = phone;
+        if(phone.getBytes().length >= 7){
+            Phone = phone;
+        }
+        else{
+            throw new IllegalArgumentException("Phone is Invalid");
+        }
         EmType = emType;
         Age = age;
     }
@@ -41,5 +46,9 @@ public class Employee extends Throwable {
 
     public String getPPSID() {
         return PPSID;
+    }
+
+    public String getPhone() {
+        return Phone;
     }
 }

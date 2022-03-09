@@ -33,7 +33,18 @@ public class TestEmployee {
     }
     @Test
     public void TestPPSIDFail(){
-        assertThrows(IllegalArgumentException.class,()-> new Employee("Mr","Tim","3","5689741",
+        assertThrows(IllegalArgumentException.class,()-> new Employee("Mr","Martin","3","5689741",
                 "Full-Time",22),"PPSID is Invalid");
+    }
+    @Test
+    public void TestPhone(){
+        Employee e1 = new Employee("Mr","Martin","265986","5689741",
+                "Full-Time",22);
+        assertTrue(e1.getPhone() != null);
+    }
+    @Test
+    public void TestPhoneFail(){
+        assertThrows(IllegalArgumentException.class,()-> new Employee("Mr","Martin","265986","23",
+                "Full-Time",22),"Phone is Invalid");
     }
 }
