@@ -14,7 +14,12 @@ public class Employee extends Throwable {
         else{
             throw new IllegalArgumentException("Wrong Title");
         }
-        Name = name;
+        if(name.getBytes().length > 5 && name.getBytes().length < 22){
+            Name = name;
+        }
+        else{
+            throw new IllegalArgumentException("Name is Invalid");
+        }
         PPSID = ppsid;
         Phone = phone;
         EmType = emType;
@@ -23,5 +28,9 @@ public class Employee extends Throwable {
 
     public String getTitle() {
         return Title;
+    }
+
+    public String getName() {
+        return Name;
     }
 }
