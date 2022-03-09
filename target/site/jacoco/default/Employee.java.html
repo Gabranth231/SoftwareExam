@@ -20,27 +20,45 @@
         else{
 <span class="fc" id="L21">            throw new IllegalArgumentException(&quot;Name is Invalid&quot;);</span>
         }
-<span class="pc bpc" id="L23" title="1 of 2 branches missed.">        if(ppsid.getBytes().length &gt;= 6){</span>
+<span class="fc bfc" id="L23" title="All 2 branches covered.">        if(ppsid.getBytes().length &gt;= 6){</span>
 <span class="fc" id="L24">            PPSID = ppsid;</span>
         }
         else{
-<span class="nc" id="L27">            throw new IllegalArgumentException(&quot;PPSID is Invalid&quot;);</span>
+<span class="fc" id="L27">            throw new IllegalArgumentException(&quot;PPSID is Invalid&quot;);</span>
         }
-<span class="fc" id="L29">        Phone = phone;</span>
-<span class="fc" id="L30">        EmType = emType;</span>
-<span class="fc" id="L31">        Age = age;</span>
-<span class="fc" id="L32">    }</span>
+<span class="fc bfc" id="L29" title="All 2 branches covered.">        if(phone.getBytes().length &gt;= 7){</span>
+<span class="fc" id="L30">            Phone = phone;</span>
+        }
+        else{
+<span class="fc" id="L33">            throw new IllegalArgumentException(&quot;Phone is Invalid&quot;);</span>
+        }
+<span class="pc bpc" id="L35" title="1 of 4 branches missed.">        if(emType == &quot;Full-Time&quot; || emType == &quot;Part-Time&quot;){</span>
+<span class="fc" id="L36">            EmType = emType;</span>
+        }
+        else{
+<span class="fc" id="L39">            throw new IllegalArgumentException(&quot;Employee Type  is Invalid&quot;);</span>
+        }
+<span class="fc" id="L41">        Age = age;</span>
+<span class="fc" id="L42">    }</span>
 
     public String getTitle() {
-<span class="fc" id="L35">        return Title;</span>
+<span class="fc" id="L45">        return Title;</span>
     }
 
     public String getName() {
-<span class="fc" id="L39">        return Name;</span>
+<span class="fc" id="L49">        return Name;</span>
     }
 
     public String getPPSID() {
-<span class="fc" id="L43">        return PPSID;</span>
+<span class="fc" id="L53">        return PPSID;</span>
+    }
+
+    public String getPhone() {
+<span class="fc" id="L57">        return Phone;</span>
+    }
+
+    public String getEmType() {
+<span class="fc" id="L61">        return EmType;</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

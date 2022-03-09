@@ -1,8 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: TestEmployee
 -------------------------------------------------------------------------------
-Tests run: 8, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.241 s <<< FAILURE! - in TestEmployee
-TestEmployee.TestPhoneFail  Time elapsed: 0.01 s  <<< FAILURE!
-org.opentest4j.AssertionFailedError: Phone is Invalid ==> Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
-	at TestEmployee.TestPhoneFail(TestEmployee.java:47)
-
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.184 s - in TestEmployee
