@@ -32,7 +32,12 @@ public class Employee extends Throwable {
         else{
             throw new IllegalArgumentException("Phone is Invalid");
         }
-        EmType = emType;
+        if(emType == "Full-Time" || emType == "Part-Time"){
+            EmType = emType;
+        }
+        else{
+            throw new IllegalArgumentException("Employee Type  is Invalid");
+        }
         Age = age;
     }
 
@@ -50,5 +55,9 @@ public class Employee extends Throwable {
 
     public String getPhone() {
         return Phone;
+    }
+
+    public String getEmType() {
+        return EmType;
     }
 }

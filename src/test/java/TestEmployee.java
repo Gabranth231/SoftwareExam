@@ -47,4 +47,15 @@ public class TestEmployee {
         assertThrows(IllegalArgumentException.class,()-> new Employee("Mr","Martin","265986","23",
                 "Full-Time",22),"Phone is Invalid");
     }
+    @Test
+    public void TestEmType(){
+        Employee e1 = new Employee("Mr","Martin","265986","5689741",
+                "Full-Time",22);
+        assertTrue(e1.getEmType() != null);
+    }
+    @Test
+    public void TestEmTypeFail(){
+        assertThrows(IllegalArgumentException.class,()-> new Employee("Mr","Martin","265986","5689741",
+                "On-Off",22),"Employee Type  is Invalid");
+    }
 }
