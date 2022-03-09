@@ -38,7 +38,12 @@ public class Employee extends Throwable {
         else{
             throw new IllegalArgumentException("Employee Type  is Invalid");
         }
-        Age = age;
+       if(age >= 18){
+           Age = age;
+       }
+       else{
+           throw new IllegalArgumentException("Age Must be over 18");
+       }
     }
 
     public String getTitle() {
@@ -59,5 +64,9 @@ public class Employee extends Throwable {
 
     public String getEmType() {
         return EmType;
+    }
+
+    public int getAge() {
+        return Age;
     }
 }
