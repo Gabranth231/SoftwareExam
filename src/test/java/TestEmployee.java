@@ -25,4 +25,15 @@ public class TestEmployee {
         assertThrows(IllegalArgumentException.class,() -> new Employee("Mr","Tim","265986","5689741",
                 "Full-Time",22),"Name is Invalid");
     }
+    @Test
+    public void TestPPSID(){
+        Employee e1 = new Employee("Mr","Martin","265986","5689741",
+                "Full-Time",22);
+        assertTrue(e1.getPPSID() != null);
+    }
+    @Test
+    public void TestPPSIDFail(){
+        assertThrows(IllegalArgumentException.class,()-> new Employee("Mr","Tim","3","5689741",
+                "Full-Time",22),"PPSID is Invalid");
+    }
 }
