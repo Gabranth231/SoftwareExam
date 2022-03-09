@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Employee.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">SoftwareEngTest</a> &gt; <a href="index.source.html" class="el_package">default</a> &gt; <span class="el_source">Employee.java</span></div><h1>Employee.java</h1><pre class="source lang-java linenums">public class Employee extends Throwable {
+    private String Title;
+    private String Name;
+    private String PPSID;
+    private String Phone;
+    private String EmType;
+    private int Age;
+
+<span class="fc" id="L9">    public Employee(String title, String name, String ppsid, String phone, String emType, int age) {</span>
+        //checking
+<span class="pc bpc" id="L11" title="2 of 6 branches missed.">        if(title == &quot;Mr&quot; || title == &quot;Mrs&quot; || title == &quot;Miss&quot;){</span>
+<span class="fc" id="L12">            Title = title;</span>
+        }
+        else{
+<span class="fc" id="L15">            throw new IllegalArgumentException(&quot;Wrong Title&quot;);</span>
+        }
+<span class="pc bpc" id="L17" title="1 of 4 branches missed.">        if(name.getBytes().length &gt;= 5 &amp;&amp; name.getBytes().length &lt;= 22){</span>
+<span class="fc" id="L18">            Name = name;</span>
+        }
+        else{
+<span class="fc" id="L21">            throw new IllegalArgumentException(&quot;Name is Invalid&quot;);</span>
+        }
+<span class="pc bpc" id="L23" title="1 of 2 branches missed.">        if(ppsid.getBytes().length &gt;= 6){</span>
+<span class="fc" id="L24">            PPSID = ppsid;</span>
+        }
+        else{
+<span class="nc" id="L27">            throw new IllegalArgumentException(&quot;PPSID is Invalid&quot;);</span>
+        }
+<span class="fc" id="L29">        Phone = phone;</span>
+<span class="fc" id="L30">        EmType = emType;</span>
+<span class="fc" id="L31">        Age = age;</span>
+<span class="fc" id="L32">    }</span>
+
+    public String getTitle() {
+<span class="fc" id="L35">        return Title;</span>
+    }
+
+    public String getName() {
+<span class="fc" id="L39">        return Name;</span>
+    }
+
+    public String getPPSID() {
+<span class="fc" id="L43">        return PPSID;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

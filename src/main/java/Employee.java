@@ -14,13 +14,18 @@ public class Employee extends Throwable {
         else{
             throw new IllegalArgumentException("Wrong Title");
         }
-        if(name.getBytes().length > 5 && name.getBytes().length < 22){
+        if(name.getBytes().length >= 5 && name.getBytes().length <= 22){
             Name = name;
         }
         else{
             throw new IllegalArgumentException("Name is Invalid");
         }
-        PPSID = ppsid;
+        if(ppsid.getBytes().length >= 6){
+            PPSID = ppsid;
+        }
+        else{
+            throw new IllegalArgumentException("PPSID is Invalid");
+        }
         Phone = phone;
         EmType = emType;
         Age = age;
@@ -32,5 +37,9 @@ public class Employee extends Throwable {
 
     public String getName() {
         return Name;
+    }
+
+    public String getPPSID() {
+        return PPSID;
     }
 }
